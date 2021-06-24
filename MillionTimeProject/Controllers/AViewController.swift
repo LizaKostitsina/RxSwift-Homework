@@ -47,21 +47,21 @@ class ABViewController: UIViewController {
         
         //MARK: - MailTextfeld Binding
         
-        mailTextfield.rx.text.bind { mail in
+        mailTextfield.rx.text.bind { [weak self] mail in
             
-                self.checkMail(mail: mail)
-                
-            self.button.isEnabled = self.mailIsCorrect && self.passwordIsCorrect
+            self?.checkMail(mail: mail)
+            
+            self?.button.isEnabled = self!.mailIsCorrect && self!.passwordIsCorrect
             
         }.disposed(by: disposeBag)
         
         //MARK: - PasswordTextfeld Binding
         
-        passwordTextfield.rx.text.bind { password in
+        passwordTextfield.rx.text.bind {[weak self]  password in
             
-            self.checkPassword(password: password)
+            self?.checkPassword(password: password)
             
-            self.button.isEnabled = self.passwordIsCorrect && self.mailIsCorrect
+            self?.button.isEnabled = self!.passwordIsCorrect && self!.mailIsCorrect
             
             
         }.disposed(by: disposeBag)
@@ -98,12 +98,23 @@ class ABViewController: UIViewController {
         
         guard let mail = mail, !(mail.count == 0) else {return}
         
-        if mail.hasSuffix("@mail.ru") || mail.hasSuffix("@gmail.ru")  {
+        if mail.contains("@") && !mail.contains(" "){
             
-            self.label.text = ""
-            mailIsCorrect = true
+            let arr = mail.split(separator: "@")
             
-        } else {
+            guard arr.count == 2 else {return}
+            
+            let arr1: String? = String(arr[1])
+            if let arrr = arr1,arrr.count >= 2 {
+                
+                self.label.text = ""
+                mailIsCorrect = true
+                
+            } else {
+                self.label.text = "Некорректная почта"
+            }
+            
+        }else {
             self.label.text = "Некорректная почта"
         }
     }

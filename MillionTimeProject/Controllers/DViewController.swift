@@ -29,19 +29,19 @@ class DViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        button.rx.tap.bind {
-            self.counter += 1
-            self.labelCounter.text = ("\(self.counter) times")
+        button.rx.tap.bind { [weak self] _ in
+            self?.counter += 1
+            self?.labelCounter.text = ("\(self?.counter ?? 0) times")
         }.disposed(by: disposeBag)
         
-        firstButton.rx.tap.bind {
-            self.firstButtonWasTapped = true
-            self.labelRocket.text = self.firstButtonWasTapped && self.secondButtonWasTapped ? "Ракета была запущена" : "Ракета не была запущена"
+        firstButton.rx.tap.bind { [weak self] _ in
+            self?.firstButtonWasTapped = true
+            self?.labelRocket.text = self!.firstButtonWasTapped && self!.secondButtonWasTapped ? "Ракета была запущена" : "Ракета не была запущена"
         }.disposed(by: disposeBag)
         
-        secondButton.rx.tap.bind {
-            self.secondButtonWasTapped = true
-            self.labelRocket.text = self.firstButtonWasTapped && self.secondButtonWasTapped ? "Ракета была запущена" : "Ракета не была запущена"
+        secondButton.rx.tap.bind { [weak self] _ in
+            self?.secondButtonWasTapped = true
+            self?.labelRocket.text = self!.firstButtonWasTapped && self!.secondButtonWasTapped ? "Ракета была запущена" : "Ракета не была запущена"
         }.disposed(by: disposeBag)
         
         

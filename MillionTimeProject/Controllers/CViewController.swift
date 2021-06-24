@@ -36,35 +36,33 @@ class CViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         
-        buttonAdd.rx.tap.subscribe(onNext: {
+        buttonAdd.rx.tap.subscribe(onNext: { [weak self] _ in
             
-            let name = self.namesSource.randomElement()
+            let name = self?.namesSource.randomElement()
             if let name = name {
-                self.names.insert(name, at: 0)
-                ps.on(.next(self.names))
+                self?.names.insert(name, at: 0)
+                ps.on(.next(self!.names))
             }
         }).disposed(by: disposeBag)
         
-        buttonDelete.rx.tap.subscribe(onNext: {
+        buttonDelete.rx.tap.subscribe(onNext: { [weak self] _ in
             
-            self.names.removeLast()
-            ps.on(.next(self.names))
+            self?.names.removeLast()
+            ps.on(.next(self!.names))
         }).disposed(by: disposeBag)
         
         
         _ = searchbar.rx.text.orEmpty
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .map({
-                query in
-                self.names.filter { name in
+            .map({  [weak self]  query in
+                self!.names.filter { name in
                     query.isEmpty || name.lowercased().contains(query.lowercased())
                 }
-            }).subscribe(onNext:{
-                            ps.on(.next($0)) }
+            }).subscribe (onNext:{
+                            ps.on(.next($0))
+                        }
             ).disposed(by: disposeBag)
-        
-        
         
     }
     

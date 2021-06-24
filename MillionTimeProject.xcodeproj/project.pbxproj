@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02761C7CC5D9714999EA2C8F /* Pods_MillionTimeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6DBBD4F57699ABDD8D8277 /* Pods_MillionTimeProject.framework */; };
 		AB5DE75D2652B8F4008FC011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DE75C2652B8F4008FC011 /* AppDelegate.swift */; };
 		AB5DE75F2652B8F4008FC011 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DE75E2652B8F4008FC011 /* SceneDelegate.swift */; };
-		AB5DE7612652B8F4008FC011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DE7602652B8F4008FC011 /* ViewController.swift */; };
 		AB5DE7642652B8F4008FC011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DE7622652B8F4008FC011 /* Main.storyboard */; };
 		AB5DE7662652B8F7008FC011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5DE7652652B8F7008FC011 /* Assets.xcassets */; };
 		AB5DE7692652B8F7008FC011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DE7672652B8F7008FC011 /* LaunchScreen.storyboard */; };
+		AB63750D267FA0AB00E98CEA /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63750C267FA0AB00E98CEA /* AViewController.swift */; };
+		AB63750F267FF74600E98CEA /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63750E267FF74600E98CEA /* CViewController.swift */; };
+		AB6375112682154C00E98CEA /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6375102682154C00E98CEA /* DViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A26A255383F215A4DC4D8585 /* Pods-MillionTimeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MillionTimeProject.release.xcconfig"; path = "Target Support Files/Pods-MillionTimeProject/Pods-MillionTimeProject.release.xcconfig"; sourceTree = "<group>"; };
 		AB5DE7592652B8F4008FC011 /* MillionTimeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillionTimeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5DE75C2652B8F4008FC011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5DE75E2652B8F4008FC011 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB5DE7602652B8F4008FC011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB5DE7632652B8F4008FC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB5DE7652652B8F7008FC011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5DE7682652B8F7008FC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5DE76A2652B8F7008FC011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB63750C267FA0AB00E98CEA /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		AB63750E267FF74600E98CEA /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		AB6375102682154C00E98CEA /* DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
+		E819C6DE97CA31D2E8DD6028 /* Pods-MillionTimeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MillionTimeProject.debug.xcconfig"; path = "Target Support Files/Pods-MillionTimeProject/Pods-MillionTimeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		FD6DBBD4F57699ABDD8D8277 /* Pods_MillionTimeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MillionTimeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02761C7CC5D9714999EA2C8F /* Pods_MillionTimeProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11973DAB07BFD5859B399F59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD6DBBD4F57699ABDD8D8277 /* Pods_MillionTimeProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CB02F947B17A26A44BFDAD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E819C6DE97CA31D2E8DD6028 /* Pods-MillionTimeProject.debug.xcconfig */,
+				A26A255383F215A4DC4D8585 /* Pods-MillionTimeProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AB5DE7502652B8F4008FC011 = {
 			isa = PBXGroup;
 			children = (
 				AB5DE75B2652B8F4008FC011 /* MillionTimeProject */,
 				AB5DE75A2652B8F4008FC011 /* Products */,
+				4CB02F947B17A26A44BFDAD9 /* Pods */,
+				11973DAB07BFD5859B399F59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,25 @@
 		AB5DE75B2652B8F4008FC011 /* MillionTimeProject */ = {
 			isa = PBXGroup;
 			children = (
+				AB637512268281B800E98CEA /* Controllers */,
 				AB5DE75C2652B8F4008FC011 /* AppDelegate.swift */,
 				AB5DE75E2652B8F4008FC011 /* SceneDelegate.swift */,
-				AB5DE7602652B8F4008FC011 /* ViewController.swift */,
 				AB5DE7622652B8F4008FC011 /* Main.storyboard */,
 				AB5DE7652652B8F7008FC011 /* Assets.xcassets */,
 				AB5DE7672652B8F7008FC011 /* LaunchScreen.storyboard */,
 				AB5DE76A2652B8F7008FC011 /* Info.plist */,
 			);
 			path = MillionTimeProject;
+			sourceTree = "<group>";
+		};
+		AB637512268281B800E98CEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB63750C267FA0AB00E98CEA /* AViewController.swift */,
+				AB6375102682154C00E98CEA /* DViewController.swift */,
+				AB63750E267FF74600E98CEA /* CViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB5DE76D2652B8F7008FC011 /* Build configuration list for PBXNativeTarget "MillionTimeProject" */;
 			buildPhases = (
+				C10ED6E30E0EBC498903442C /* [CP] Check Pods Manifest.lock */,
 				AB5DE7552652B8F4008FC011 /* Sources */,
 				AB5DE7562652B8F4008FC011 /* Frameworks */,
 				AB5DE7572652B8F4008FC011 /* Resources */,
+				D0B47757410A7A950B3BCE65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +172,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C10ED6E30E0EBC498903442C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MillionTimeProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0B47757410A7A950B3BCE65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MillionTimeProject/Pods-MillionTimeProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MillionTimeProject/Pods-MillionTimeProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MillionTimeProject/Pods-MillionTimeProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB5DE7552652B8F4008FC011 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5DE7612652B8F4008FC011 /* ViewController.swift in Sources */,
+				AB63750D267FA0AB00E98CEA /* AViewController.swift in Sources */,
+				AB6375112682154C00E98CEA /* DViewController.swift in Sources */,
+				AB63750F267FF74600E98CEA /* CViewController.swift in Sources */,
 				AB5DE75D2652B8F4008FC011 /* AppDelegate.swift in Sources */,
 				AB5DE75F2652B8F4008FC011 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +367,7 @@
 		};
 		AB5DE76E2652B8F7008FC011 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E819C6DE97CA31D2E8DD6028 /* Pods-MillionTimeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +386,7 @@
 		};
 		AB5DE76F2652B8F7008FC011 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A26A255383F215A4DC4D8585 /* Pods-MillionTimeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
